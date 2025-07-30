@@ -148,6 +148,11 @@ body {
   gap: var(--spacing-200);
 }
 
+.creator-info img {
+  border: 1px solid var(--white);
+  border-radius: 99px;
+}
+
 .creator-text {
   display: flex;
   flex-direction: row;
@@ -170,4 +175,47 @@ body {
   color: var(--white);
   line-height: 125%;
   letter-spacing: 0px;
+}
+
+.overlay {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30.2rem;
+  cursor: pointer;
+}
+
+.view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  z-index: 1;
+}
+
+.overlay:hover .view {
+  visibility: visible;
+}
+
+.overlay:hover .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--cyan-400);
+  opacity: 50%;
+  height: 30.2rem;
+  width: 30.2rem;
+  z-index: 1;
+  border-radius: var(--spacing-100);
+}
+
+.card-content:has(.overlay:hover) .title-and-description h1 {
+  color: var(--cyan-400);
+}
+
+.card-content:has(.overlay:hover) .creator-text .text-2 {
+  color: var(--cyan-400);
 }
