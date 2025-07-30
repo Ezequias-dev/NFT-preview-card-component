@@ -17,9 +17,9 @@
 
   /* SPACING */
   --spacing-0: 0rem;
-  --spacing-100: 8rem;
-  --spacing-200: 16rem;
-  --spacing-300: 24rem;
+  --spacing-100: 0.8rem;
+  --spacing-200: 1.6rem;
+  --spacing-300: 2.4rem;
 }
 
 html {
@@ -32,3 +32,20 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-950);
+}
+
+.card {
+  background-color: var(--blue-900);
+  width: 35rem;
+  height: 59.6rem;
+  padding: var(--spacing-300);
+  border-radius: 1.5rem;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0953);
+}
